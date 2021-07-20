@@ -15,12 +15,15 @@
         array.push(i);
     }
     console.log(array);
+
     let numbers = [1, 2, 3];
     numbers.reverse();
     console.log(numbers);
+
     let newArray = [1, 2, 3];
     newArray.push(4,5,6);
     console.log(newArray);
+
     let unArray = [1,2,3]
     unArray.unshift(4,5,6);
     console.log(unArray);
@@ -104,6 +107,7 @@
     }
     // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
     // 3. перебрати циклом while та вивести  числа тільки з непарним індексом
+
     i =0;
     while (i < massifs.length) {
         if (i % 2 !==0){
@@ -113,6 +117,7 @@
     }
     // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
     // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+
     for (let j = 0; j < massifs.length; j++) {
         if (i % 2 !==0) {
             console.log(massifs[i]);
@@ -120,6 +125,7 @@
     }
     // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
     // 5. перебрати циклом while та вивести  числа тільки парні  значення
+
     i =0;
     while (i < massifs.length) {
         if (massifs[i] % 2 ===0){
@@ -129,6 +135,7 @@
     }
     // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
     // 6. перебрати циклом for та вивести  числа тільки парні  значення
+
     for (let j = 0; j < massifs.length; j++) {
         if (massifs[j] % 2 ===0) {
             console.log(massifs[j]);
@@ -136,6 +143,7 @@
     }
     // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
     // 7. замінити кожне число кратне 3 на слово "okten"
+
     i =0;
     while (i < massifs.length) {
         if (massifs[i] % 3 === 0){
@@ -146,6 +154,7 @@
     }
     // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
     // 7. замінити кожне число кратне 3 на слово "okten"
+
     let massifs1 = [2,17,13,6,22,31,45,66,100,-18];
     for (let j = 0; j < massifs1.length; j++) {
         if (massifs1[j] % 3 ===0) {
@@ -335,6 +344,96 @@
         }
     }
     console.log(newArrayNumber);
+</script>
+<script >
+// - створити функцію яка обчислює та повертає площу прямокутника висотою
+
+function rectangle(a,b)
+{
+    let s = a * b;
+    console.log(s);
+    return s;
+}
+rectangle(3,4);
+
+// - створити функцію яка обчислює та повертає площу кола
+function  a (R)
+{
+    let s = 2 * 3.14 * (R ** 2);
+    console.log(s);
+    return s;
+}
+a(3);
+
+// - створити функцію яка обчислює та повертає площу циліндру
+
+function cylinder(h,R){
+    let s = 2 * 3.14 *R * (h + R);
+    console.log(s);
+    return s;
+}
+cylinder(3,2);
+
+// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+
+function maxNumber(){
+    let min = arguments[0];
+    let max = arguments[0];
+    for (const element of arguments) {
+       if(element > max){
+           max = element;
+       }
+     if(element < min){
+        min = element;
+    }
+    }
+    console.log(max);
+    return min;
+}
+maxNumber(85484,48485,84848,444,848,4844,5458,4848);
+
+// - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+// EXAMPLE:
+// foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+// foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+// foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+//
+
+// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+// Двожина масиву від 2 до 100
+// EXAMPLE:
+// [1,0,6,0,3] => [1,6,3,0,0]
+// [0,1,2,3,4] => [1,2,3,4,0]
+// [0,0,1,0]   => [1,0,0,0]
+//
+
+    // function k() {
+        let array10 = [];
+        let newArray10 = [];
+        for (let i = 2; i < 101; i++) {
+            array10 = i;
+            // console.log(array10);
+            if (i % 10 === 0) {
+                newArray10 = i;
+
+            }
+            array10.push(newArray10[i]);
+            console.log(array10);
+        }
+        // return array10;
+
+// }
+//
+// k();
+
+// - Дано список імен.
+// let n1 = '    Harry       Potter      '
+// let n2 = '    Ron       Whisley      '
+// let n3 = '    Hermione       Granger      '
+// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+// let n1 = 'Harry Potter'
+// let n2 = 'Ron Whisley'
+// let n3 = 'Hermione Granger'
 </script>
 </body>
 </html>
