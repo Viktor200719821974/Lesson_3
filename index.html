@@ -368,7 +368,7 @@ a(3);
 // - створити функцію яка обчислює та повертає площу циліндру
 
 function cylinder(h,R){
-    let s = 2 * 3.14 *R * (h + R);
+    let s = 2 * 3.14 * R * (h + R);
     console.log(s);
     return s;
 }
@@ -397,8 +397,14 @@ maxNumber(85484,48485,84848,444,848,4844,5458,4848);
 // foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
 // foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 // foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-//
 
+let foo = [[9,8,0,4],0] ;
+for (let i = 0; i < foo.length; i++) {
+        if ( i === 0) {
+            [foo[i], foo[i+1]]= [foo[i + 1], foo[i]];
+            console.log(foo[i]);
+    }
+}
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // EXAMPLE:
@@ -407,24 +413,22 @@ maxNumber(85484,48485,84848,444,848,4844,5458,4848);
 // [0,0,1,0]   => [1,0,0,0]
 //
 
-    // function k() {
-        let array10 = [];
-        let newArray10 = [];
-        for (let i = 2; i < 101; i++) {
-            array10 = i;
-            // console.log(array10);
-            if (i % 10 === 0) {
-                newArray10 = i;
-
-            }
-            array10.push(newArray10[i]);
-            console.log(array10);
+function  k(){
+    let array10 = [];
+let newArray10 = [];
+for (let i = 2; i < 101; i++) {
+    if (i % 10 !== 0) {
+      array10.push(i);
+    }
+        if (i % 10 === 0) {
+            newArray10.push(i);
         }
-        // return array10;
-
-// }
-//
-// k();
+}
+array10.push(newArray10);
+console.log(array10);
+return array10;
+}
+k();
 
 // - Дано список імен.
 // let n1 = '    Harry       Potter      '
@@ -434,6 +438,8 @@ maxNumber(85484,48485,84848,444,848,4844,5458,4848);
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
+
+
 </script>
 </body>
 </html>
