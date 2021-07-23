@@ -344,104 +344,10 @@
         }
     }
     console.log(newArrayNumber);
+</script>
     
-    / - створити функцію яка обчислює та повертає площу прямокутника висотою
-
-function rectangle(a,b)
-{
-    let s = a * b;
-    console.log(s);
-    return s;
-}
-rectangle(3,4);
-
-// - створити функцію яка обчислює та повертає площу кола
-function  a (R)
-{
-    let s = 2 * 3.14 * (R ** 2);
-    console.log(s);
-    return s;
-}
-a(3);
-
-// - створити функцію яка обчислює та повертає площу циліндру
-
-function cylinder(h,R){
-    let s = 2 * 3.14 * R * (h + R);
-    console.log(s);
-    return s;
-}
-cylinder(3,2);
-
-// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
-
-function maxNumber(){
-    let min = arguments[0];
-    let max = arguments[0];
-    for (const element of arguments) {
-       if(element > max){
-           max = element;
-       }
-     if(element < min){
-        min = element;
-    }
-    }
-    console.log(max);
-    return min;
-}
-maxNumber(85484,48485,84848,444,848,4844,5458,4848);
-
-// - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
-// EXAMPLE:
-// foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
-// foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
-// foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-
-let foo = [[9,8,0,4],0] ;
-for (let i = 0; i < foo.length; i++) {
-        if ( i === 0) {
-            [foo[i], foo[i+1]]= [foo[i + 1], foo[i]];
-            console.log(foo[i]);
-    }
-}
-// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
-// Двожина масиву від 2 до 100
-// EXAMPLE:
-// [1,0,6,0,3] => [1,6,3,0,0]
-// [0,1,2,3,4] => [1,2,3,4,0]
-// [0,0,1,0]   => [1,0,0,0]
-//
-
-function  k(){
-    let array10 = [];
-let newArray10 = [];
-for (let i = 2; i < 101; i++) {
-    if (i % 10 !== 0) {
-      array10.push(i);
-    }
-        if (i % 10 === 0) {
-            newArray10.push(i);
-        }
-}
-array10.push(newArray10);
-console.log(array10);
-return array10;
-}
-k();
-
-// - Дано список імен.
-// let n1 = '    Harry       Potter      '
-// let n2 = '    Ron       Whisley      '
-// let n3 = '    Hermione       Granger      '
-// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
-// let n1 = 'Harry Potter'
-// let n2 = 'Ron Whisley'
-// let n3 = 'Hermione Granger'
-</script>
-</body>
-</html>
-</script>
 <script >
+    
 // - створити функцію яка обчислює та повертає площу прямокутника висотою
 
 function rectangle(a,b)
