@@ -413,6 +413,18 @@ console.log(foo([9,8,0,4], 0));
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
 //
+    let zeroArray = [1,0,6,0,3];
+function zero(arr){
+    let arr1 = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === 0){
+          arr.splice(i,1);
+          arr1.push(0);
+          i--;
+        }
+    }
+    console.log(arr.concat(arr1));
+}
 
 function  k(){
     let array10 = [];
@@ -439,8 +451,26 @@ k();
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
+    
+let n1 = '    Harry       Potter      ';
+let n2 = '    Ron       Whisley      ';
+let n3 = '    Hermione       Granger ';
 
-
+  function nameNormalizator(nameToNormalize = ''){
+let normalizedName = nameToNormalize.trim();
+      normalizedName = normalizedName.split(' ');
+      normalizedName = normalizedName.filter(function (string){
+        if (string !== ''){
+            return true;
+        }
+    });
+      normalizedName = normalizedName.join(' ');
+    console.log(normalizedName);
+     return normalizedName;
+}
+nameNormalizator(n1);
+nameNormalizator(n2);
+nameNormalizator(n3);
 </script>
 </body>
 </html>
